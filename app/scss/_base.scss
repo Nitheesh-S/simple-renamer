@@ -1,0 +1,67 @@
+.dark {
+	--bg-2: #28303c;
+	--bg: #222831;
+	--bg2: #181C22;
+	--bg3: #1A1D24;
+	--bg4: black;
+	--text-color: #F9FFEE;
+	--accent1: #EFBB35;
+	--accent2: #E84279;
+	--accent3: #dfa612;
+	--subtle-accent1: rgba(236, 198, 48, .1);
+	--subtle-accent2: #1A1D24;
+	--subtle-accent3: rgba(236, 198, 48, .1);
+}
+
+
+.solarized-dark {
+	--bg: #002b36;
+    --bg2: #073642;
+    --bg3: #073642;
+    --bg4: #021e25;
+    --text-color: #93a1a1;
+    --accent1: #7d99a3;
+    --accent2: #268bd2;
+    --accent3: #b58900;
+    --subtle-accent1: rgba(147, 161, 161, 0.5);
+    --subtle-accent2: #073642;
+    --subtle-accent3: rgba(32, 104, 130, 0.6);
+}
+
+html {
+	font-size: 16px
+}
+
+body {
+	background: var(--bg);
+    color: var(--text-color);
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    line-height: 1.6;
+    font-weight: 300;
+    transition: background-color .25s ease-out;
+}
+
+
+a,button {
+	text-decoration: none
+}
+
+*,*:after,*:before {
+	box-sizing: border-box
+}
+
+input[type=text],input[type=email],input[type=search],textarea {
+	-webkit-appearance: none;
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--gs1);
+	box-shadow: inset 0 1px 2px var(--subtle);
+	display: block;
+	padding: .5rem;
+	width: 100%;
+	transition: box-shadow .45s, border-color .45s ease-in-out;
+	background: var(--bg3);
+	color: var(--text-color)
+}

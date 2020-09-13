@@ -1,0 +1,73 @@
+{
+  "name": "renamer",
+  "version": "1.0.0",
+  "description": "Rename Files and Folders",
+  "main": "public/electron.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "regenerator": true
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "create": "webpack",
+    "react-start": "webpack-dev-server",
+    "electron-start": "electron .",
+    "start": "concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:8080/ && electron .\"",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Nitheesh",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.10.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/plugin-transform-runtime": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.6.0",
+    "electron": "^9.0.4",
+    "electron-builder": "^22.8.0",
+    "electron-react-devtools": "^0.5.3",
+    "html-webpack-plugin": "^4.3.0",
+    "node-sass": "^4.14.1",
+    "react-devtools": "^4.7.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "wait-on": "^5.0.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "build": {
+    "appId": "nitheesh.123",
+    "directories": {
+      "buildResources": "resources",
+      "output": "release"
+    },
+    "win": {
+      "icon": "public/react-256.ico",
+      "target": [
+          "nsis",
+          "msi"
+      ],
+      "publisherName": "Nitheesh"
+    }
+  }
+}

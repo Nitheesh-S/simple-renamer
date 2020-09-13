@@ -1,0 +1,64 @@
+@import 'scss/reset';
+@import 'scss/base';
+
+
+.app-home {
+	display: grid;
+	padding: 10px 20px 20px;
+	.header {
+		width: 100%;
+		display: grid;
+		align-items: center;
+		justify-items: center;
+	}
+	.rules-block {
+		max-width: 400px;
+		padding: 20px;
+		width: 100%;
+		display: grid;
+		gap: 20px;
+		select[name="rename_type"] {
+			justify-self: end;
+		}
+	}
+	.ls-container {
+		display: grid;
+		width: 100%;
+		max-width: 400px;
+		margin: 0 auto;
+		grid-gap: 30px;
+		> div {
+			padding: 20px;
+			background: var(--bg-2);
+			border-radius: 5px;
+		}
+		ul {
+			margin-top: 10px;
+		}
+		li {
+			button {
+				display: block;
+				border: 0;
+				background: transparent;
+				color: #eee;
+				width: 100%;
+				cursor: pointer;
+				padding: 5px 20px;
+				text-align: left;
+				&:hover{
+					background: var(--bg);
+				}
+				&.is-selected {
+					background: #334258;
+				}
+			}
+		}
+	}
+	// .result-block {}
+	.explorer-block {
+		li {
+			margin: 0 -20px;
+		}
+	}
+	
+}
